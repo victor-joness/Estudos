@@ -1,0 +1,22 @@
+body{
+    background: cyan;
+    font: normal 15pt arial;
+}
+
+header {
+    text-align: center;
+}
+
+section{
+    background: white;
+    width: 500px;
+    box-shadow: 5px 5px rgba(0, 0, 0, 0.205);
+    margin: auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+footer{
+    font:normal 15pt italic;
+    text-align: center;
+}
