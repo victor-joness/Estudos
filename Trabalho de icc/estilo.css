@@ -1,3 +1,10 @@
+* {
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    }
+
 body{
     background: turquoise;
     font: normal 15pt arial;
@@ -8,37 +15,53 @@ div#center{
     border-color: rgb(50, 50, 167);
     border-radius: 10px;
     text-align: center;
-    margin-left: 40%;
+    margin-left: 35%;
     display: inline-block;
-    padding: 5px
+    padding: 1%;
+    width:28%;
 }
 p.assunto{
     text-align: center;
     font: normal 20pt arial;
+    margin-top: 0.5%;
+    margin-bottom: 0.5%;
 }
 div#primeiro-assunto{
-    text-align: center;
     font: normal 15pt arial;
-    width: 1050px;
     margin: auto;
+    width:63%;
 }
 div#img01{
-    margin-left:550px;
-    padding: 5px;
-    width:1000px;
-    height:220px;
+    margin-left:30%;
+    padding: 1%;
+    width:60%;
+    height: 10%;
 }
 div#segundo-assunto{
-    text-align: center;
     font: normal 15pt arial;
-    width: 1050px;
-    margin: auto;
+    width: 63%;
+    margin:auto;
 }
 p.link-externno{
-    width: 1100px;
+    width: 100%;
+    margin-top: 1%;
+}
+div#pagina2{
+    text-align: center;
+    font: normal 20pt arial;
+    margin-top: 0.5%;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: black;
+    padding: 0.3%;
+    margin-left: 46%;
+}
+a.botao{
+    color: turquoise;
 }
 footer{
-    text-align: center;
     font-style: italic;
-    font-size: 1em;
+    font-size: 100%;
+    margin-top: 1%;
+    text-align: center;
 }
