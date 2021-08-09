@@ -1,0 +1,31 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Arial";
+}
+
+body{
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+button{
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 42px;
+    border: 1px solid turquoise;
+    color: turquoise;
+    background-color: transparent;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover{
+    box-shadow: 0 0 15px turquoise,
+    inset 0 0 15px turquoise;
+    text-shadow: 0 0 5px turquoise;
+}
