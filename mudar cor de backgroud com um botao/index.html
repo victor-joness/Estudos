@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button class="laranja" id="btn-laranja">Laranja</button>
+        <button class="vermelho" id="btn-vermelho">Vermelho</button>
+        <button class="purpura" id="btn-purpura">Purpura</button>
+    </div>
+
+    <script>
+        document.getElementById("btn-laranja").addEventListener("click", function () {
+            document.querySelector("body").setAttribute("class", "laranja");
+        })
+
+        document.getElementById("btn-vermelho").addEventListener("click", function () {
+            document.querySelector("body").setAttribute("class", "vermelho");
+        })
+
+        document.getElementById("btn-purpura").addEventListener("click", function () {
+            document.querySelector("body").setAttribute("class", "purpura");
+        })
+    </script>
+</body>
+
+</html>
