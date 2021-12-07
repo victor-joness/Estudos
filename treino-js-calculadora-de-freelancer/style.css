@@ -1,0 +1,214 @@
+/*font-family: 'Roboto', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
+
+/*font-family: 'Roboto Condensed', sans-serif;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+
+/*font-family: 'Roboto Mono', monospace;*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+/* resetando o site */
+*{
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+    background-color: #383D4B;
+}
+
+/* definindo nossos links */
+a{
+    opacity: 0.9;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/* quando cliclar em algum link, voltamos a opacidade */
+a:hover{
+    opacity: 1;
+}
+
+
+:root{
+    /*Paleta de Cores*/
+    --cor0: #8A75DB;
+    --cor1: #776CBA;
+    --cor3: #44B8F3;
+    --cor4: #FF7F4C;
+    --cor5: #383D4B;
+    --cor6: #fbece5;
+	--cor7: #f4d1c1;
+	--cor8: #C5B5F1;
+	--cor9: #c5b5f1;
+
+    /*Fontes*/
+    --font-padrao: 'Roboto', sans-serif;
+    --font-titulo: 'Roboto Condensed', sans-serif;
+    --font-titulo2: 'Roboto Condensed', sans-serif;
+    --font-subtitulo: 'Roboto', sans-serif;
+    --font-textura: 'Roboto Mono', monospace;    
+}
+
+input[type=number]::-webkit-inner-spin-button,
+    input[type=number]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+
+.Background{
+    background:#8A75DB;
+    border-radius: 10px;
+    width: 600px;
+    height: 600px;
+    margin: auto;
+    box-shadow: 10px 10px #C5B5F1 ;
+    margin-top: 200px;
+    flex-direction: column;
+}
+
+.Background h1 {
+    font-family: var(--font-titulo);
+    text-align: center;
+    background-color: #8A75DB;
+    border-radius: 10px;
+    font-size: 1.6rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.Background .seu-nome {
+    background-color: #FFf;
+    padding: 10px 10px;
+    display: flex;
+    margin: auto;
+    width: 350px;
+    margin-top: 15px;
+}
+
+.Background .ganhos-por-hora {
+    background-color: #FFf;
+    padding: 10px 10px;
+    display: flex;
+    margin: auto;
+    width: 350px;
+    text-decoration: none;
+}
+
+.Background .horas-por-dia {
+    background-color: #FFf;
+    padding: 10px 10px;
+    display: flex;
+    margin: auto;
+    width: 350px;
+    text-decoration: none;
+}
+
+.Background p{
+    font-family: var(--font-titulo);
+    text-align: center;
+    background-color: #8A75DB;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 3px;
+}
+
+.Background .dias-projeto {
+    background-color: #FFf;
+    padding: 10px 10px;
+    display: flex;
+    margin: auto;
+    width: 350px;
+    text-decoration: none;
+}
+
+.button {
+    background-color:#f4d1c1;
+    padding: 10px 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: auto;
+    display: flex;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+p.resposta {
+    font-size: 1.7rem;
+    margin-top: 30px;
+
+}
+
+p.footer{
+    margin-top:30px;
+}
+
+@media(max-width:700px){
+    .Background{
+        background:#8A75DB;
+        border-radius: 10px;
+        width: 400px;
+        height: 500px;
+        margin: auto;
+        box-shadow: 10px 10px #C5B5F1 ;
+        margin-top: 100px;
+        flex-direction: column;
+    }
+    p.resposta {
+        font-size: 1.5rem;
+        margin-top: 20px;
+    }
+}
+
+@media(max-width:320px){
+    .Background{
+        background:#8A75DB;
+        border-radius: 10px;
+        width: 200px;
+        height: 600px;
+        margin: auto;
+        box-shadow: 10px 10px #C5B5F1 ;
+        margin-top: 100px;
+        flex-direction: column;
+    }
+
+    .Background .seu-nome {
+        background-color: #FFf;
+        padding: 10px 10px;
+        display: flex;
+        margin: auto;
+        width: 150px;
+    }
+    
+    .Background .ganhos-por-hora {
+        background-color: #FFf;
+        padding: 10px 10px;
+        display: flex;
+        margin: auto;
+        width: 150px;
+        text-decoration: none;
+    }
+
+    .Background .horas-por-dia {
+        background-color: #FFf;
+        padding: 10px 10px;
+        display: flex;
+        margin: auto;
+        width: 150px;
+        text-decoration: none;
+    }
+
+    .Background .dias-projeto {
+        background-color: #FFf;
+        padding: 10px 10px;
+        display: flex;
+        margin: auto;
+        width: 150px;
+        text-decoration: none;
+    }
+}

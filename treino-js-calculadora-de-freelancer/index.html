@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de free-lance</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <Section class="Background">
+        <h1>Calculadora de Free-lancer</h1>
+        <input type="text" name="nome" id="nome" placeholder="Seu nome" class="seu-nome">
+        <p class="pp">Quanto vc ganha por hora ?</p>
+        <input type="number" id="ganhos-por-hora" class="ganhos-por-hora" placeholder="Seu valor/Hora">
+        <p class="pp">Quantas hora irá trabalhar por dia ?</p>
+        <input type="number" id="horas-por-dia" class="horas-por-dia" placeholder="horas por dia">
+        <p class="pp">Quantos dias irá durar o projeto ?</p>
+        <input type="number" id="dias-projeto" class="dias-projeto" placeholder="Dias/Projeto">
+        <input type="button" value="Calcular" class="button" onclick="calcular()">
+        <p id="resposta" class="resposta"></p>
+        <p id="footer" class="footer">&copy; By Victor Mesquita</p>
+    </Section>
+
+    <script src="script.js"></script>
+</body>
+</html>
