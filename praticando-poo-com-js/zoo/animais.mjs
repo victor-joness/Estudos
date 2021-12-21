@@ -1,6 +1,6 @@
 import List from "./List.js";
 
-let seila = new List();
+let vocabulario = new List();
 class Animais{
 
     constructor(nome, peso){
@@ -88,4 +88,51 @@ class Papagaio extends Ave{
         super(nome, peso);
     }
 
+    novafrase(String){
+        vocabulario.Add(String);
+    }
+
+    getlist(){
+        return vocabulario;
+    }
+
+    getfrases(numero){
+        for(let i=0; i < numero; i++){
+            console.log(vocabulario.GetItem(i));
+        }
+    }
 }
+
+class Avestruz extends Mamifero{
+    constructor(nome, peso){
+        super(nome, peso);
+    }
+}
+
+class cachorro extends Mamifero{
+    constructor(nome, peso){
+        super(nome, peso);
+    }
+}
+
+class vaca extends Mamifero{
+    constructor(nome, peso){
+        super(nome, peso);
+    }
+}
+
+let joao = new Papagaio("joao",20);
+
+joao.isvoa(false);
+
+joao.novafrase("tudo bem");
+joao.novafrase("acordei");
+joao.getlist(joao);
+
+let tamanho = joao.getlist().Count();
+
+joao.getfrases(tamanho);
+
+let joaquina = new vaca("joaquina", 200);
+
+console.log(joaquina.getpeso());
