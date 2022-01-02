@@ -1,0 +1,16 @@
+{
+  "scripts": {
+    "start": "node dist/index.js",
+    "start:ts": "ts-node src/index.ts",
+    "dev": "ts-node-dev --transpile-only src/questao-03.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.5",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "typescript-collections": "^1.3.3"
+  }
+}
