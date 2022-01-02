@@ -10,3 +10,4 @@ Tecnologias
 * HTML
 * CSS
 * JavaScript
+* Typescript
