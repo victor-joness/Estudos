@@ -2,7 +2,7 @@
   "scripts": {
     "start": "node dist/index.js",
     "start:ts": "ts-node src/index.ts",
-    "dev": "ts-node-dev --transpile-only src/questao-04.ts"
+    "dev": "ts-node-dev --transpile-only src/questao-05.ts"
   },
   "devDependencies": {
     "@types/node": "^17.0.5",

@@ -1,0 +1,1 @@
+import Collections = require('typescript-collections');
