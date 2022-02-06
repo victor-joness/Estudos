@@ -66,7 +66,33 @@ function factorial(n) { // Uma função para calcular fatoriais
     } 
     return product; // Retorna o produto
 }
-console.log(factorial(4));
+
+//temos essa versao tambem
+function factorial2(n) {
+    var i, product = 1;
+    for(i=2; i <= n; i++) 
+    product *= i; 
+    return product;
+}
+console.log(factorial2(5));
+
+//um pequeno exemplo de classes em js
+class Point {
+    constructor(x, y) {
+        this.x = x; // A palavra-chave this é o novo objeto que está sendo inicializado
+        this.y = y; // Armazena os argumentos da função como propriedades do objeto
+    }
+
+    imprimir(){
+        return "testando";
+    }
+}
+
+function Point2(x,y) { // Por convenção, as construtoras começam com letras maiúsculas
+    this.x = x; // A palavra-chave this é o novo objeto que está sendo inicializado
+    this.y = y; // Armazena os argumentos da função como propriedades do objeto
+}
+//podemos usar as duas, eu prefiro a primera
 
 
 
