@@ -47,4 +47,15 @@ let unRegex = /.un/; // run, sun, fun, pun, nune bun
 let result7 = unRegex.test(exampleStr);
 console.log(result7);
 
+//Corresponder a um único caractere com várias possibilidades
+/*
+Por exemplo, você deseja corresponder a bag, bige bugmas não a bog. Você pode criar o regex /b[aiu]g/para fazer isso. The [aiu]é a classe de 
+caracteres que corresponderá apenas aos caracteres a, iou u.
+*/
+
+let quoteSample = "Beware of bugs in the above code; I have only proved it correct, not tried it.";
+let vowelRegex = /[aeiou]/gi; // Change this line
+let result8 = quoteSample.match(vowelRegex);
+console.log(result8);
+
 
