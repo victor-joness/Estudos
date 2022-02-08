@@ -68,12 +68,28 @@ batStr.match(bgRegex);
 matStr.match(bgRegex);
 //Em ordem, as três matchchamadas retornariam os valores ["cat"], ["bat"], e null.
 //aqui temos outro exemplo, onde pegamos todos as letras do alfabeto
-let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let quoteSample1 = "The quick brown fox jumps over the lazy dog.";
 let alphabetRegex = /[a-z]/gi;  
-let result = quoteSample.match(alphabetRegex);
+let result = quoteSample1.match(alphabetRegex);
 
 //Combine números e letras do alfabeto, O uso do hífen ( -) para corresponder a um intervalo de caracteres não se limita a letras. 
 //Também funciona para corresponder a um intervalo de números. -> /[0-5]/, podemos usar letras e numeros juntos
-let quoteSample = "Blueberry 3.141592653s are delicious.";
-let myRegex = /[h-s2-6]/ig; // Change this line
-let result = quoteSample.match(myRegex);
+let quoteSample2 = "Blueberry 3.141592653s are delicious.";
+let myRegex1 = /[h-s2-6]/ig; // Change this line
+let result10 = quoteSample2.match(myRegex1);
+
+//Até agora, você criou um conjunto de caracteres que deseja corresponder, mas também pode criar um conjunto de caracteres que não deseja corresponder.
+//usando o sinalizador ^ podemos definir oq não queremos -> /[^aeiou]/gi, corresponde a todos os caracteres que não sao vogais
+let quoteSample3 = "3 blind mice.";
+let myRegex3 = /[^aeiou0-9]/gi; 
+let result9 = quoteSample3.match(myRegex3);
+//com isso não pegamos nenhum numero e nenhum vogal
+console.log(result9)
+
+//Corresponder a caracteres que ocorrem uma ou mais vezes, podemos usar o sinalizador +, lembre-se tem que ser um apos o outro
+let difficultSpelling = "Mississippi";
+let myRegex10 = /s+/gi; // Change this line
+let result11 = difficultSpelling.match(myRegex10);
+console.log(result11)
+
+//
