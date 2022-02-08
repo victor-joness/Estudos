@@ -58,4 +58,22 @@ let vowelRegex = /[aeiou]/gi; // Change this line
 let result8 = quoteSample.match(vowelRegex);
 console.log(result8);
 
+//Combine as letras do alfabeto, temos outro sinalizador - , 'Hifen', onde podemos definir um intervalo [a-e] vai do a,b,c,d,e
+let catStr = "cat";
+let batStr = "bat";
+let matStr = "mat";
+let bgRegex = /[a-e]at/;
+catStr.match(bgRegex);
+batStr.match(bgRegex);
+matStr.match(bgRegex);
+//Em ordem, as três matchchamadas retornariam os valores ["cat"], ["bat"], e null.
+//aqui temos outro exemplo, onde pegamos todos as letras do alfabeto
+let quoteSample = "The quick brown fox jumps over the lazy dog.";
+let alphabetRegex = /[a-z]/gi;  
+let result = quoteSample.match(alphabetRegex);
 
+//Combine números e letras do alfabeto, O uso do hífen ( -) para corresponder a um intervalo de caracteres não se limita a letras. 
+//Também funciona para corresponder a um intervalo de números. -> /[0-5]/, podemos usar letras e numeros juntos
+let quoteSample = "Blueberry 3.141592653s are delicious.";
+let myRegex = /[h-s2-6]/ig; // Change this line
+let result = quoteSample.match(myRegex);
