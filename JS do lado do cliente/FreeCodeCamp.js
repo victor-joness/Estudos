@@ -138,3 +138,45 @@ let result = movieName.match(numRegex).length;
 let movieName = "2001: A Space Odyssey";
 let noNumRegex = /\D/gi;
 let result = movieName.match(noNumRegex).length;
+
+//Você pode procurar por espaços em branco usando \s
+let sample = "Whitespace is important in separating words";
+let countWhiteSpace = /\s/gi;
+let result = sample.match(countWhiteSpace);
+
+//Corresponder a caracteres que não sejam espaços em branco, usando o \S
+let sample = "Whitespace is important in separating words";
+let countNonWhiteSpace = /\S/gi;
+let result = sample.match(countNonWhiteSpace);
+
+//Especifique o número superior e inferior de correspondências, Os especificadores de quantidade são usados ​​com colchetes ({e})
+let ohStr = "Ohhh no";
+let ohRegex = /Oh{3,6}\sno/; 
+let result = ohRegex.test(ohStr);
+//ou seja o h se repetindo entre 3 e 6 vezes
+
+//Especifique apenas o menor número de correspondências, voce coloca o {numero,}
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4,}ah/;
+let result = haRegex.test(haStr);
+
+//Especifique o número exato de correspondências, voce coloca o {numero} sem virgula
+
+let haStr = "Hazzzzah";
+let haRegex = /Haz{4}ah/;
+let result = haRegex.test(haStr);
+
+//Verificar tudo ou nenhum, usamos o sinalizador ?
+let american = "color";
+let british = "colour";
+let rainbowRegex= /colou?r/;
+rainbowRegex.test(american);
+rainbowRegex.test(british);
+//ambos retorna true
+//mais um exemplo
+let favWord = "favorite";
+let favRegex = /favou?rite/; 
+let result = favRegex.test(favWord);
+
+//
+
