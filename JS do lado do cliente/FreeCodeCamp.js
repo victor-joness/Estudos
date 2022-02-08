@@ -1,4 +1,4 @@
-
+//Regular expressions
 //Regular expressions usando .test();
 let myString = "Hello, World!";
 let myRegex = /Hello/;
@@ -107,5 +107,10 @@ let myRegex8 = /<.*?>/;
 let result13 = text.match(myRegex8);
 console.log(result13);
 
-//
+//Corresponder aos Padrões de String Iniciais, usando o sinalizador /^/, lembrando que usando /[^]/ estamos negando , e usando apenas ^ estamos procurando no inicio
+let rickyAndCal = "Cal and Ricky both like racing.";
+let calRegex = /^Cal/;
+let result14 = calRegex.test(rickyAndCal);
+console.log(result14);
+
 
