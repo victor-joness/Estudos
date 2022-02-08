@@ -113,4 +113,28 @@ let calRegex = /^Cal/;
 let result14 = calRegex.test(rickyAndCal);
 console.log(result14);
 
+//Corresponder aos Padrões de String de Finalização, usando o sinalizador $, lembrando de usar sem [] torna isso procurar no inicio ou no fim
+let caboose = "The last car on a train is the caboose";
+let lastRegex = /caboose$/;
+let result15 = lastRegex.test(caboose);
 
+//Combinar todas as letras e números, /\w/, corresponde a [A-Za-z0-9_], ou seja todas as letras maiusculas e minusculas e todos os numeros
+let quoteSample6 = "The five boxing wizards jump quickly.";
+let alphabetRegexV2 = /\w/gi;
+let result16 = quoteSample6.match(alphabetRegexV2).length;
+console.log(result16);
+
+//Combine tudo, menos letras e números, Você pode procurar o oposto do \w com \W, esse atalho é o mesmo que [^A-Za-z0-9_]
+let quoteSample5 = "The five boxing wizards jump quickly.";
+let nonAlphabetRegex = /\W/gi;
+let resultt = quoteSample5.match(nonAlphabetRegex).length;
+
+//Corresponder a todos os números, \d, é o mesmo que [0-9]
+let movieName = "2001: A Space Odyssey";
+let numRegex = /\d/gi; 
+let result = movieName.match(numRegex).length;
+
+//Corresponder a todos os não-números, \D, é o mesmo que [^0-9]
+let movieName = "2001: A Space Odyssey";
+let noNumRegex = /\D/gi;
+let result = movieName.match(noNumRegex).length;
