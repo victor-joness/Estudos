@@ -178,5 +178,28 @@ let favWord = "favorite";
 let favRegex = /favou?rite/; 
 let result = favRegex.test(favWord);
 
-//
+//Verifique se há agrupamento misto de caracteres, Às vezes, queremos verificar grupos de caracteres usando uma expressão regular e, para isso, usamos parênteses ().
+let myString = "Eleanor Roosevelt";
+let myRegex = /(Eleanor|Franklin|Franklin D.) Roosevelt/;
+let result = myRegex.test(myString);
+
+//Reutilizar padrões usando grupos de captura
+// se você não souber a palavra específica repetida?, para isso usamos /(\w+)/
+
+//Use grupos de captura para pesquisar e substituir
+let str = "one two three";
+let fixRegex = /(\w+)\s(\w+)\s(\w+)/; // Change this line
+let replaceText = "$3 $2 $1"; // Change this line
+let result20 = str.replace(fixRegex,replaceText);
+console.log(result20);
+
+//Remover espaços em branco do início e do fim
+let hello = "   Hello, World!  ";
+let wsRegex = /^\s+|\s+$/g; // Change this line
+let result = hello.replace(wsRegex, "");
+
+//^ para dizer oq eu n quero, \s para pegar espaço em branco,+ caso for mais de 1, ou | , espaço em branco no final.
+
+
+
 
