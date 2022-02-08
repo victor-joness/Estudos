@@ -92,4 +92,20 @@ let myRegex10 = /s+/gi; // Change this line
 let result11 = difficultSpelling.match(myRegex10);
 console.log(result11)
 
+//Corresponder a caracteres que ocorrem zero ou mais vezes, usando o sinalizador *
+let chewieQuote = "Aaaaaaaaaaaaaaaarrrgh!";
+let chewieRegex = /Aa*/; 
+let result12 = chewieQuote.match(chewieRegex);
+console.log(result12);
+
+//Encontre personagens com correspondência preguiçosa,Você pode aplicar o regex /t[a-z]*i/à string "titanic". Esse regex é basicamente um padrão que 
+//começa com t, termina com i, e tem algumas letras no meio.
+//As expressões regulares são gulosas por padrão, então a correspondência retornaria ["titani"]. Ele encontra a maior sub-string possível para ajustar o padrão.
+//No entanto, você pode usar o ?caractere para alterá-lo para correspondência lenta. "titanic"comparado com a regex ajustada de /t[a-z]*?i/retornos ["ti"].
+let text = "<h1>Winter is coming</h1>";
+let myRegex8 = /<.*?>/; 
+let result13 = text.match(myRegex8);
+console.log(result13);
+
 //
+
