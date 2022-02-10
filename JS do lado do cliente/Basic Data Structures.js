@@ -231,4 +231,132 @@ let userActivity = {
 userActivity.data["ofline"] = 20;
 console.log(userActivity);
 
-//Nomes de propriedade de acesso com notação entre colchetes
+//Nomes de propriedade de acesso com notação entre colchetes, fazendo a verificação se tem o apples em foods, caso tenha retorna quanto tem, caso não retorna undefined
+let foods2 = {
+    apples: 25,
+    oranges: 32,
+    plums: 28,
+    bananas: 13,
+    grapes: 35,
+    strawberries: 27
+  };
+  
+  function checkInventory(scannedItem) {
+    scannedItem = foods2[scannedItem];
+    return scannedItem;
+  }  
+  console.log(checkInventory("apples"));
+
+//Use a palavra-chave delete para remover propriedades do objeto
+//Nos desafios anteriores, adicionamos e modificamos os pares de valores-chave de um objeto. Aqui veremos como podemos remover um par chave-valor de um objeto.
+let foods3 = {
+    apples: 25,
+    oranges: 32,
+    plums: 28,
+    bananas: 13,
+    grapes: 35,
+    strawberries: 27
+};
+delete foods3.apples;
+console.log(foods3);
+
+//Verificar se um objeto tem uma propriedade
+//Se tivermos um objeto userscom uma propriedade de Alan, podemos verificar sua presença de uma das seguintes maneiras:
+let users = {
+    Alan: {
+      age: 27,
+      online: true
+    },
+    Jeff: {
+      age: 32,
+      online: true
+    },
+    Sarah: {
+      age: 48,
+      online: true
+    },
+    Ryan: {
+      age: 19,
+      online: true
+    }
+  };
+users.hasOwnProperty('Alan');
+'Alan' in users;
+  function isEveryoneHere(userObj) {
+    // Only change code below this line
+    if( "Alan" in userObj && "Jeff" in userObj && "Sarah" in userObj && "Ryan" in userObj){
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
+  console.log(isEveryoneHere(users));
+
+//Iterar através das chaves de um objeto com uma instrução for...in
+//Às vezes, você pode precisar percorrer todas as chaves dentro de um objeto. Isso requer uma sintaxe específica em JavaScript chamada de instrução for...in . Para o nosso usersobjeto, isso poderia ser assim:
+for (let user in users) {
+    console.log(user);
+}
+
+//aqui temos um exemplo usando [], qunado for uma variavel, com . a gente não consegue acessar
+const users2 = {
+    Alan: {
+      online: false
+    },
+    Jeff: {
+      online: true
+    },
+    Sarah: {
+      online: false
+    }
+  }
+  
+  function countOnline(usersObj) {
+    let contador = 0;
+    // Only change code below this line
+    for (let user in usersObj) {
+      if(usersObj[user].online == true){
+        contador++
+      }
+    }
+    return contador
+  }
+  
+  console.log(countOnline(users2));
+
+  //Gere uma matriz de todas as chaves de objeto com Object.keys()
+  //Também podemos gerar um array que contém todas as chaves armazenadas em um objeto usando o Object.keys()método e passando um objeto como argumento.
+  function getArrayOfUsers(obj) {
+    // Only change code below this line
+    return Object.keys(obj)
+  }
+  console.log(getArrayOfUsers(users));
+
+  //Modificar uma matriz armazenada em um objeto
+  let user = {
+    name: 'Kenneth',
+    age: 28,
+    data: {
+      username: 'kennethCodesAllDay',
+      joinDate: 'March 26, 2016',
+      organization: 'freeCodeCamp',
+      friends: [
+        'Sam',
+        'Kira',
+        'Tomo'
+      ],
+      location: {
+        city: 'San Francisco',
+        state: 'CA',
+        country: 'USA'
+      }
+    }
+  };
+  
+  function addFriend(userObj, friend) {
+    userObj.data.friends.push(friend) 
+    return userObj.data.friends
+  }
+  
+  console.log(addFriend(user, 'Pete'));
