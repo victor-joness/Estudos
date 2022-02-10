@@ -80,9 +80,36 @@ function forecast(arr) {
     return arr;
 }
 console.log(forecast(['cold', 'rainy', 'warm', 'sunny', 'cool', 'thunderstorms']));
+//Copiar um Array com o Operador Spread, A sintaxe de propagação simplesmente se parece com isso:...
+let thisArray = [true, true, undefined, false, null];
+let thatArray = [...thisArray];
+console.log(thatArray);
+//temos outro exemplo aqui
 
-//
+function copyMachine(arr, num) {
+    let newArr = [];
+    let contador = 0;
+    while (num >= 1) {
+      newArr[contador] = [...arr];
+      num--;
+      contador++;
+    }
+    return newArr;
+}
+  
+console.log(copyMachine([true, false, true], 2));
 
+//Combine Arrays com o Operador Spread, Outra grande vantagem do operador spread é a capacidade de combinar arrays, ou inserir todos os elementos de um array em outro, em qualquer índice.
+let thisArray2 = ['sage', 'rosemary', 'parsley', 'thyme'];
+let thatArray2 = ['basil', 'cilantro', ...thisArray2, 'coriander'];
+console.log(thatArray2)
+//temos outro exemplo
+function spreadOut() {
+    let fragment = ['to', 'code'];
+    let sentence = ['learning', ...fragment,  'is', 'fun']; // Change this line
+    return sentence;
+}
+console.log(spreadOut());
 
 
 
