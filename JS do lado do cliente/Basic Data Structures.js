@@ -166,4 +166,69 @@ let myNestedArray = [
 //esse array tem 5 niveis de complexidade, poi são 5 array aninhados um dentro do outro;
 
 //Adicionar pares de valores-chave a objetos JavaScript
+const tekkenCharacter = {
+    player: 'Hwoarang',
+    fightingStyle: 'Tae Kwon Doe',
+    human: true
+};
+//podemos adicionar novas propriedades a partir do objeto ja criado
+tekkenCharacter.origin = "south coreia";
+console.log(tekkenCharacter);
+tekkenCharacter["cidade natal"] = "rio de janiero "; //é usada quando se tem espaço ou quando se quer usar uma variavel
+console.log(tekkenCharacter);
+const eyes = 'eye color';
+tekkenCharacter[eyes] = 'brown';
+/*
+{
+  player: 'Hwoarang',
+  fightingStyle: 'Tae Kwon Doe',
+  human: true,
+  origin: 'South Korea',
+  'hair color': 'dyed orange',
+  'eye color': 'brown'
+};*/
+//temos outro exemplo
+let foods = {
+    apples: 25,
+    oranges: 32,
+    plums: 28
+};
 
+foods["bananas"] = 13;
+foods["grapes"] = 35;
+foods["strawberries"] = 27;
+//é comum usar [] quando aquela propiedade do objeto não existe e usar . quando ja existe
+foods.apples = 20;
+console.log(foods)
+
+//Modificar um objeto aninhado dentro de um objeto
+let nestedObject = {
+    id: 28802695164,
+    date: 'December 31, 2016',
+    data: {
+      totalUsers: 99,
+      online: 80,
+      onlineStatus: {
+        active: 67,
+        away: 13,
+        busy: 8
+      }
+    }
+  };
+  //podemos usar a mesma coisa de . e [] para acessar e modificar
+  nestedObject.data.onlineStatus.busy = 10;
+  console.log(nestedObject);
+
+//temos outro exemplo
+let userActivity = {
+    id: 23894201352,
+    date: 'January 1, 2017',
+    data: {
+      totalUsers: 51,
+      online: 42
+    }
+};
+userActivity.data["ofline"] = 20;
+console.log(userActivity);
+
+//Nomes de propriedade de acesso com notação entre colchetes
