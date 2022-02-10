@@ -111,6 +111,23 @@ function spreadOut() {
 }
 console.log(spreadOut());
 
+//Verifique a presença de um elemento com indexOf(), indexOf()recebe um elemento como parâmetro e, quando chamado, retorna a posição, ou índice, desse elemento, ou -1se o elemento não existe no array.
+let fruits = ['apples', 'pears', 'oranges', 'peaches', 'pears'];
+fruits.indexOf('dates');
+fruits.indexOf('oranges');
+fruits.indexOf('pears');
+console.log(fruits.indexOf('dates'));
+console.log(fruits.indexOf('oranges'));
+//outro exemplo
+function quickCheck(arr, elem) {
+    if( arr.indexOf(elem) == -1){
+      return false;
+    }
+    else{
+      return true;
+    }
+}
+console.log(quickCheck(['squash', 'onions', 'shallots'], 'mushrooms'));
 
 
 
