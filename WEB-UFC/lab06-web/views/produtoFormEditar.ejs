@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab 04 - WEB</title>
+    <style type="text/css">
+      div {
+        text-align: center;
+      }
+
+      button {
+        margin: 10px 600px;
+        padding: 10px;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/produto-editar" method="post">
+      <div>
+        <input type="hidden" name="id" value="<%= produto.id %>">
+      </div>
+      <div>
+        <label for="nome">Nome:</label><br>
+        <input type="text" name="nome" id="nome" value="<%= produto.nome %>">
+      </div>
+      <div>
+         <label for="descricao">Descrição:</label><br>
+         <input type="text" name="descricao" id="descricao" value="<%= produto.descricao %>">
+      </div>
+      <div>
+        <label for="preco">Preço:</label><br>
+        <input type="number" name="preco" id="preco" value="<%= produto.preco %>">
+      </div>
+      <div>
+        <label for="categoria">Categoria:</label><br>
+        <select name="categoria" id="categoria">
+         <% bdCategorias.map((item) => { %>
+            <option value="<%= item.chave %>"
+              <% if(bdCategorias.chave == produto.categoria.chave){ %>
+                  <%= selected %>
+              <% }else{ %>
+                  <%= '' %>
+              <% } %>>
+
+              <%= item.valor %>    
+            </option>
+         <% }) %> 
+        </select>
+      </div>
+
+      <button type="submit">Adicionar Produto</button>
+    </form>
+  </body>
+</html>
