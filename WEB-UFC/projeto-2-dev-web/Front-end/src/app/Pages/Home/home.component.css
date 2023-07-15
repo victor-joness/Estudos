@@ -1,0 +1,111 @@
+.container{
+    width: 70vw;
+    margin: auto;
+    margin-top: 3%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* header */
+
+.container .header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .header h1{
+    font-size: 3rem;
+}
+
+/* user container */
+
+.container .header .user-container{
+    display: flex;
+    gap: 2rem;
+    height: 40px;
+    text-align: center;
+    align-items: center;
+}
+
+.container .header .user-container img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.container .header .user-container h2{
+    font-size: 2rem;
+}
+
+/* search container */
+
+.search-container form{
+    display: flex;
+    gap: .1rem;
+}
+
+.search-container input{
+    padding: 1rem;
+    border: .13rem solid #000;
+    border-radius: .5rem;
+    font-size: 1.3rem;
+    height: 45px;
+}
+
+/* users container */
+
+.card-deck{
+    display: flex;
+    gap: .1rem;
+}
+
+.card-deck .card-deck-user{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border: .3rem solid #738ca567;
+    padding: 1rem;
+    border-radius: .5rem;
+}
+
+.card-deck .card-deck-user img{
+    width: 100%;
+    height: 200px;
+    border-radius: .5rem;
+}
+
+.card-deck .card-deck-user h1{
+    margin: .5rem;
+}
+
+.card-deck .card-deck-user h3{
+    margin-top: .2rem;
+}
+
+/* buttons */
+
+.btn{
+    background-color: rgb(23, 123, 163);
+    color: #fff;
+    padding: .7rem;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    border-radius: .5rem;
+    border: .13rem solid transparent;
+}
+
+.logout{
+    color: #fff;
+    background-color: red;
+    padding: 1rem;
+    line-height: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: .5rem;
+    border: .13rem solid transparent;
+}
+
+.btn:hover, .logout:hover{
+    border: .13rem solid #000;
+}
