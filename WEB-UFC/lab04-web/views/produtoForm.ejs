@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab 04 - WEB</title>
+    <style type="text/css">
+      div {
+        text-align: center;
+      }
+
+      button {
+        margin: 10px 600px;
+        padding: 10px;
+        width: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="/produto-salvar" method="post">
+      <div>
+        <label for="nome">Nome:</label><br>
+        <input type="text" name="nome" id="nome">
+      </div>
+      <div>
+         <label for="descricao">Descrição:</label><br>
+         <input type="text" name="descricao" id="descricao">
+      </div>
+      <div>
+        <label for="preco">Preço:</label><br>
+        <input type="number" name="preco" id="preco">
+      </div>
+      <div>
+        <label for="categoria">Categoria:</label><br>
+        <select name="categoria" id="categoria">
+         <% categorias.map((item) => { %>
+            <option value="<%= item.chave %>"><%= item.valor %></option>
+         <% }) %> 
+        </select>
+      </div>
+
+      <button type="submit">Adicionar Produto</button>
+    </form>
+  </body>
+</html>

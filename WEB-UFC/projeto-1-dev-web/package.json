@@ -1,0 +1,27 @@
+{
+  "name": "projeto-01-web",
+  "version": "1.0.0",
+  "description": "Projeto 1 da disciplina de desenvolvimento de software para web",
+  "main": "src/servidor.js",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon ./src/servidor.js"
+  },
+  "keywords": [],
+  "author": "Jorge Nobre, Livian Torres, Samuel Lopes, Victor Mesquita",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-session": "^2.0.0",
+    "date-fns": "^2.30.0",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "mongodb": "^5.5.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.2",
+    "path": "^0.12.7",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}

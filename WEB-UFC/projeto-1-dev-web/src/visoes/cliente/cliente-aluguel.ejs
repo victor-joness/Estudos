@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meus Aluguéis</title>
+  <link href="http://localhost:3000/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <%- include("../partials/header-cliente"); %>
+
+  <div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Meus Aluguéis</h2>
+
+    <% if(alugueis.length <= 0){ %>
+      <div class="alert alert-secondary mt-4 text-center" role="alert">
+        Não há aluguéis solicitados
+      </div>
+    <% } %>
+  
+    <% alugueis.forEach((aluguel)=> { %>
+      <%- include("../partials/cartao-aluguel", { aluguel, admin: false }); %>
+    <% }) %>
+  </div>
+
+  <%- include("../partials/modal-detalhes-carro"); %>
+
+  <footer class="text-center">Projeto 1 de Web - Desenvolvido por <a href="">Jorge Nobre</a>, <a href="">Livian Torres</a>, <a href="">Samuel Lopes</a>, <a href="https://github.com/victor-joness">Victor Mesquita</a></footer>
+  
+  <script src="http://localhost:3000/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script src="../../js/carros/modal-detalhes-carro.js"></script>
+</body>
+
+</html>

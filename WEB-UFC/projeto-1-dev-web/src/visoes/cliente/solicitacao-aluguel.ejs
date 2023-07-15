@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Aluguel de Veículo</title>
+
+  <link href="http://localhost:3000/css/bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+  <style>
+    .cartao-data-aluguel:not(:last-child){
+      margin-right: 2%;
+    }
+  </style>
+
+</head>
+
+<body>
+  <%- include("../partials/header-cliente"); %>
+
+  <div class="container d-flex justify-content-center align-items-center mt-4 mb-5">
+    <div class="d-flex flex-column justify-content-center align-items-center w-50">
+      <h2 class="pb-2 border-bottom fs-4 w-100 text-center">Dados da Solicitação de Aluguel</h2>
+
+      <div class="bg-body-tertiary w-100 mt-2 pb-4">
+        <% if(mensagemErro){ %>
+          <div class="alert alert-danger w-100" role="alert">
+            <%= mensagemErro %>
+          </div>
+        <% } %>
+
+        <img
+          src="<%= carroSelecionado.urlImagem %>"
+          class="card-img-top rounded-2 object-fit-cover" 
+          alt="Foto do <%= carroSelecionado.modelo %>" 
+          style="height: 16rem; width: 100%;" 
+        />
+
+        <div class="mx-4">
+          <div class="mb-3 mt-4">
+            <label for="modalModeloCarro" class="form-label">Modelo</label>
+            <input 
+              type="text" 
+              class="form-control" 
+              placeholder="Modelo do carro" 
+              value="<%= carroSelecionado.modelo %>" 
+              readonly 
+            />
+          </div>
+
+          <div class="d-flex justify-content-between mb-3 mt-4">
+            <div style="width: 48%;">
+              <label for="modalMarcaCarro" class="form-label">Marca</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                placeholder="Marca do carro" 
+                value="<%= carroSelecionado.marca %>" 
+                readonly 
+              />
+            </div>
+
+            <div style="width: 48%;">
+              <label for="modalCorCarro" class="form-label">Cor</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                placeholder="Cor do carro" 
+                value="<%= carroSelecionado.cor %>" 
+                readonly 
+              />
+            </div>
+          </div>
+
+          <div class="mb-5 mt-2">
+            <label for="modalPrecoDiariaCarro" class="form-label">Preço da Diária</label>
+            <input 
+              id="inputPrecoDiaria" 
+              type="number" 
+              class="form-control" 
+              placeholder="Preço da diária (R$)" 
+              value="<%= carroSelecionado.precoDiaria %>"
+              readonly 
+            />
+          </div>
+
+          <% if(ultimosAlugueis.length > 0){ %>
+            <div class="mb-5">
+              <h3 class="fs-6 fw-bold mb-3">Últimas Reservas do Veículo:</h3>
+
+              <div class="d-flex align-items-center mb-4 w-100">
+
+                <% ultimosAlugueis.forEach((aluguel) => { %>
+                  <div class="py-2 px-2 bg-body-secondary rounded-2 cartao-data-aluguel" style="width: 32%;">
+                    <p class="mb-0 text-center" style="line-height: 1.6rem;">
+                      <strong style="color: gray; font-size: 0.9rem;"><%= aluguel.dataInicial %></strong>
+                      <br />até<br />
+                      <strong style="color: gray; font-size: 0.9rem;"><%= aluguel.dataFinal %></strong>
+                    </p>
+                  </div>
+                <% }); %>
+    
+              </div>
+            </div>
+          <% } %>
+
+          <form
+            id="formularioSolicitacaoAluguel" 
+            action="/solicitar-aluguel/<%= carroSelecionado.id %>" 
+            method="post" 
+            class="mt-6"
+          >
+            <h3 class="fs-6 fw-bold mb-4">Dados do Aluguel:</h3>
+
+            <div style="display: none;" class="alert alert-danger w-100" id="mensagemErroIntervaloAluguel" role="alert">
+              Intervalo de datas do aluguel é inválido
+            </div>
+
+            <div class="d-flex justify-content-between mb-3 mt-4">
+              <div style="width: 48%;">
+                <label for="dataInicial" class="form-label">Data de Início</label>
+                <input type="date" class="form-control" placeholder="Data de Início" id="inputDataInicialAluguel"
+                  name="dataInicial" />
+              </div>
+
+              <div style="width: 48%;">
+                <label for="dataFim" class="form-label">Data de Fim</label>
+                <input type="date" class="form-control" placeholder="Data de Fim" id="inputDataFinalAluguel"
+                  name="dataFinal" />
+              </div>
+            </div>
+
+            <div class="d-flex justify-content-between mb-3 mt-3">
+              <div style="width: 48%;">
+                <label for="selectFormaPagamento" class="form-label">Forma de Pagamento</label>
+                
+                <select name="formaPagamento" class="form-select" id="selectFormaPagamento" required>
+                  <option selected disabled value="">Selecione</option>
+                  <option value="CARTAO_CREDITO">Cartão de Crédito</option>
+                  <option value="BOLETO">Boleto</option>
+                  <option value="PIX">Pix</option>
+                </select>
+              </div>
+
+              <div style="width: 48%;">
+                <label class="form-label">Valor Total (R$)</label>
+                <input 
+                  type="number" 
+                  class="form-control" 
+                  placeholder="Valor Total" 
+                  id="inputValorTotalAluguel"
+                  required
+                  readonly 
+                />
+              </div>
+            </div>
+
+            <input 
+              type="submit" 
+              value="Solicitar Aluguel" 
+              id="botaoSolicitacaoAluguel" 
+              class="btn btn-success w-100 mt-4" 
+            />  
+          </form>       
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap -->
+    <script src="http://localhost:3000/js/bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="http://localhost:3000/js/date-fns/date_fns.min.js"></script>
+
+    <script src="../../js/alugueis/solicitacao-aluguel.js"></script>    
+</body>
+
+</html>
