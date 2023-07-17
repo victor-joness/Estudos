@@ -1,0 +1,24 @@
+# depslib dependency file v1.0
+1636049836 source:c:\users\victo\onedrive\햞ea de trabalho\arquivos de c testes]\circulo\circulo.c
+	<stdio.h>
+	<stdlib.h>
+	"circulo.h"
+	"ponto.h"
+	<math.h>
+
+1636049830 c:\users\victo\onedrive\햞ea de trabalho\arquivos de c testes]\circulo\circulo.h
+	"ponto.h"
+
+1635766204 c:\users\victo\onedrive\햞ea de trabalho\arquivos de c testes]\circulo\ponto.h
+
+1635766158 source:c:\users\victo\onedrive\햞ea de trabalho\arquivos de c testes]\circulo\ponto.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"ponto.h"
+
+1636049836 source:c:\users\victo\onedrive\햞ea de trabalho\arquivos de c testes]\circulo\main.c
+	<stdio.h>
+	"circulo.h"
+	"ponto.h"
+

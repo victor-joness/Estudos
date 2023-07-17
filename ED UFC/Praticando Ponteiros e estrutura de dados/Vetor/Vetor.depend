@@ -1,0 +1,14 @@
+# depslib dependency file v1.0
+1637245073 source:c:\users\victo\onedrive\Área de trabalho\arquivos de c testes]\vetor\vetor.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"vetor.h"
+
+1637150332 c:\users\victo\onedrive\Área de trabalho\arquivos de c testes]\vetor\vetor.h
+
+1637245111 source:c:\users\victo\onedrive\Área de trabalho\arquivos de c testes]\vetor\main.c
+	<stdio.h>
+	<stdlib.h>
+	"vetor.h"
+
