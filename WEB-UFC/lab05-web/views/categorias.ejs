@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab 04 - WEB</title>
+    <style type="text/css">
+      h1 {
+        margin: auto;
+        background: cyan;
+        color: black;
+        padding: 10px;
+        width: 400px;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+      }
+
+      table {
+        margin-top: 30px;
+      }
+
+      table td {
+        text-align: center;
+      }
+
+      form {
+        margin: 20px;
+      }
+
+      button {
+        padding: 10px;
+        width: 150px;
+        margin-left: 20px;
+        background: limegreen;
+        color: white;
+        border: none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Categorias</h1>
+
+      <form method="POST" action="/categoria-salvar">
+        <label for="chave">Chave:</label><br>
+        <input type="text" id="chave" name="chave" placeholder="Digite a chave"><br><br>
+        <label for="valor">Valor:</label><br>
+        <input type="text" id="valor" name="valor" placeholder="Digite o valor"><br>
+        <br>
+        <button value="Enviar">Enviar</button>
+      </form>
+
+      <table border="1">
+        <tr>
+          <th>Chave</th>
+          <th>Valor</th>
+          <th>Deletar</th>
+        </tr>
+
+        <% bdCategoria.map((item) => { %>
+          <tr>
+            <td><%= item.chave %></td> 
+            <td><%= item.valor %></td>
+            <td> <a href="/categoria-deletar?chave=<%= item.chave %>">Deletar</a> </td>
+          </tr> 
+        <% }) %>
+      </table>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1635510081 source:c:\users\victo\onedrive\Área de trabalho\arquivos de c testes]\ponto\ponto.c
+	<stdio.h>
+	<stdlib.h>
+	<math.h>
+	"ponto.h"
+
+1635510099 c:\users\victo\onedrive\Área de trabalho\arquivos de c testes]\ponto\ponto.h
+
+1635511815 source:c:\users\victo\onedrive\Área de trabalho\arquivos de c testes]\ponto\main.c
+	<stdio.h>
+	"ponto.h"
+

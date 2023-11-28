@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lab 04 - WEB</title>
+    <style type="text/css">
+      div {
+        text-align: center;
+      }
+
+      h3 {
+        background: greenyellow;
+        padding: 5px;
+        width: 100px;
+      }
+
+      .button-prod {
+        text-decoration: none;
+        color: white;
+        background: darkblue;
+        padding: 10px;
+        border-radius: 10px;
+      }
+
+      .button-prod:hover{
+        background: lightblue;
+      }
+
+      table{
+        margin: 20px auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Produtos</h1>
+      <a class="button-prod" href="/produtos-adicionar">Cadastrar Produto</a>
+      <table border="1">
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Descrição</th>
+          <th>Preço</th>
+          <th>Categoria</th>
+          <th>Editar</th>
+        </tr>
+        <% bdProdutos.map((item) => {%>
+        <tr>
+          <td><%= item.id %></td>
+          <td><%= item.nome %></td>
+          <td><%= item.descricao %></td>
+          <td><%= item.preco %></td>
+          <td><%= item.categoria.valor %></td>
+          <td><a href="/produto-form-editar?id=<%= item.id %>">Editar</a></td>
+        </tr>
+        <% }) %>
+      </table>
+    </div>
+  </body>
+</html>

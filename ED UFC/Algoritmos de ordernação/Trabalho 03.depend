@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1644090521 source:c:\users\victo\onedrive\Área de trabalho\arquivos de c testes]\trabalho 03\main.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"funcoes.h"
+
+1644090201 source:c:\users\victo\onedrive\Área de trabalho\arquivos de c testes]\trabalho 03\funcoes.c
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
+	"funcoes.h"
+
+1644079538 c:\users\victo\onedrive\Área de trabalho\arquivos de c testes]\trabalho 03\funcoes.h
+

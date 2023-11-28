@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title>Admin - Aluguéis</title>
+
+  <link href="http://localhost:3000/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <%- include("../partials/header-admin"); %>
+
+  <div class="container px-4 py-5" id="custom-cards">
+    <h2 class="pb-2 border-bottom">Lista de Aluguéis</h2>
+
+    <% if(alugueis.length <= 0){ %>
+      <div class="alert alert-secondary mt-4 text-center" role="alert">
+        Não há aluguéis solicitados
+      </div>
+    <% } %>
+
+    <% if(mensagemErro){ %>
+      <div class="alert alert-danger w-100" role="alert">
+        <%= mensagemErro %>
+      </div>
+    <% } %>
+
+    <% alugueis.forEach((aluguel)=> { %>
+      <%- include("../partials/cartao-aluguel", { aluguel, admin: true }); %>
+    <% }) %>
+  </div>
+
+  <%- include("../partials/modal-detalhes-carro"); %>
+  <%- include("../partials/modal-detalhes-cliente"); %>
+
+  <footer class="text-center">Projeto 1 de Web - Desenvolvido por <a href="">Jorge Nobre</a>, <a href="">Livian Torres</a>, <a href="">Samuel Lopes</a>, <a href="https://github.com/victor-joness">Victor Mesquita</a></footer>
+
+  <script src="http://localhost:3000/js/bootstrap/bootstrap.bundle.min.js"></script>  
+  <script src="http://localhost:3000/js/date-fns/date_fns.min.js"></script>
+  
+  <script src="../../js/carros/modal-detalhes-carro.js"></script>
+  <script src="../../js/usuarios/modal-detalhes-cliente.js"></script>
+</body>
+</html>

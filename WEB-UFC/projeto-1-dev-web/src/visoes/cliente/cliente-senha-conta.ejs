@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Conta - Editar</title>
+  
+  <link href="http://localhost:3000/css/bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet" />
+
+  <style>
+    .image{
+        height: 200px;
+        width: auto;
+    }
+
+    .image img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+  </style>
+
+</head>
+<body>
+  <%- include("../partials/header-cliente"); %>
+
+  <h3 class="text-center mt-4">Alterar Senha</h3>
+
+  <form class="w-25 text-center m-auto pt-3" method="POST" action="/loja/conta">
+    <div class="form-outline mb-2">
+      <label class="form-label" for="senha" id="senha">Senha Atual:</label>
+      <input type="password" name="senha" id="senha" class="form-control" required />
+    </div>
+
+    <div class="form-outline mb-2">
+      <label class="form-label" for="senhaNova">Senha Nova:</label>
+      <input type="password" name="senhaNova" id="senhaNova" class="form-control" required/>
+    </div>
+
+    <div class="form-outline mb-2">
+      <label class="form-label" for="confirmacaoSenhaNova">Confirmação de Senha Nova:</label>
+      <input type="password" name="confirmacaoSenhaNova" id="confirmacaoSenhaNova" class="form-control" required />
+    </div>
+      
+    <button type="submit" class="btn btn-primary mb-4 mt-4" id="botaoConclusao">Concluir Alterações</button>
+  </form> 
+
+  <div style="display: none;" class="alert alert-danger w-50 text-center m-auto p-2 mb-4" id="mensagemErroSenha" role="alert">
+    Senha e confirmação de senha precisam ser iguais!
+  </div>
+
+  <footer class="text-center mb-2">Projeto 1 de Web - Desenvolvido por <a href="">Jorge Nobre</a>, <a href="">Livian Torres</a>, <a href="">Samuel Lopes</a>, <a href="https://github.com/victor-joness">Victor Mesquita</a></footer>
+
+  <script src="http://localhost:3000/js/bootstrap/bootstrap.bundle.min.js"></script>
+  <script type="module" src="../../js/usuarios/verificacao-senha-nova.js"></script>
+</body>
+</html>

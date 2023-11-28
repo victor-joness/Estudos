@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1642527906 source:c:\users\victo\onedrive\햞ea de trabalho\arquivos de c testes]\trabalho\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"Fila.h"
+
+1642507761 c:\users\victo\onedrive\햞ea de trabalho\arquivos de c testes]\trabalho\fila.h
+
+1642528346 source:c:\users\victo\onedrive\햞ea de trabalho\arquivos de c testes]\trabalho\funcoesfila.c
+	<stdio.h>
+	<stdlib.h>
+	"Fila.h"
+
+1642527234 source:c:\users\victo\onedrive\햞ea de trabalho\arquivos de c testes]\trabalho\menus.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"Fila.h"
+
+1642895568 source:c:\users\victo\onedrive\햞ea de trabalho\trabalho 2 ed\trabalho\funcoesfila.c
+	<stdio.h>
+	<stdlib.h>
+	"Fila.h"
+
+1642896785 c:\users\victo\onedrive\햞ea de trabalho\trabalho 2 ed\trabalho\fila.h
+
+1642895840 source:c:\users\victo\onedrive\햞ea de trabalho\trabalho 2 ed\trabalho\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"Fila.h"
+
+1642888025 source:c:\users\victo\onedrive\햞ea de trabalho\trabalho 2 ed\trabalho\menus.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	"Fila.h"
+

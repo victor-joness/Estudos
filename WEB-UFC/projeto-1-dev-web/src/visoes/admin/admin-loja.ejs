@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <link href="http://localhost:3000/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+    <title>Admin-Loja</title>
+    <style>
+      .image{
+        height: 200px;
+        width: auto;
+      }
+
+      .image img{
+        height: 100%;
+        width: 100%;
+        Border-radius: 10px;
+      }
+    </style>
+</head>
+<body>
+  <%- include("../partials/header-admin"); %>
+
+  <div class="container px-4 py-5" id="custom-cards">
+    <div class="d-flex justify-content-between">
+        <h2 class="pb-2 border-bottom">Lista de Carros</h2>
+        <a type="button" href="/admin/loja/add-veiculo" class="btn btn-primary mt-2 mb-2">Adicionar Carro</a>
+    </div>
+
+    <% if(veiculos.length <= 0){ %>
+      <div class="alert alert-secondary mt-4 text-center" role="alert">
+        Não há carros cadastrados
+      </div>
+    <% } %>
+
+    <% if(mensagemErro){ %>
+      <div class="alert alert-danger mt-4 text-center" role="alert">
+        <%= mensagemErro %>
+      </div>
+    <% } %>
+
+    <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+      <% veiculos.forEach(veiculo =>{ %>
+        <%- include("../partials/cartao-carro", { veiculo, tipoUsuario }); %>
+      <%}) %>
+    </div>
+  </div>
+
+  <footer class="text-center">Projeto 1 de Web - Desenvolvido por <a href="">Jorge Nobre</a>, <a href="">Livian Torres</a>, <a href="">Samuel Lopes</a>, <a href="https://github.com/victor-joness">Victor Mesquita</a></footer>
+  <script src="http://localhost:3000/js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

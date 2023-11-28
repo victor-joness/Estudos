@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Inicial - AlugaSe</title>
+
+  <link href="http://localhost:3000/css/bootstrap/bootstrap.min.css" type="text/css" rel="stylesheet" />
+</head>
+<body>
+  <%- include("../partials/header-cliente"); %>
+
+  <div class="container px-4 py-5" id="custom-cards">
+    <div class="container m-0 p-0 d-flex justify-content-between align-items-end">
+      <h2 class="pb-2 border-bottom w-50">Lista de Carros</h2>
+
+      <form action="/loja" method="GET" class="d-flex">
+        <input 
+          type="text" 
+          class="form-control" 
+          placeholder="Modelo ou marca"
+          name="textoBuscaModeloOuMarca"
+          value="<%= textoBuscaModeloOuMarca %>"
+        />
+
+        <button type="submit" class="btn btn-primary ms-3">Buscar</button>
+      </form>
+    </div>
+
+    <% if(veiculos.length <= 0){ %>
+      <div class="alert alert-secondary mt-4 text-center" role="alert">
+        Não há carros cadastrados
+      </div>
+    <% } %>
+
+      <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+        <% veiculos.forEach(veiculo =>{ %>
+          <%- include("../partials/cartao-carro", { veiculo, tipoUsuario }); %>
+        <%}) %>
+      </div>
+  </div>
+
+  <footer class="text-center">Projeto 1 de Web - Desenvolvido por <a href="">Jorge Nobre</a>, <a href="">Livian Torres</a>, <a href="">Samuel Lopes</a>, <a href="https://github.com/victor-joness">Victor Mesquita</a></footer>
+  <script src="http://localhost:3000/js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minha Conta - Editar</title>
+
+  <link href="http://localhost:3000/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+
+  <style>
+    .image{
+        height: 200px;
+        width: auto;
+    }
+
+    .image img{
+        height: 100%;
+        width: 100%;
+        border-radius: 10px;
+    }
+  </style>
+
+</head>
+<body>
+  <%- include("../partials/header-cliente"); %>
+
+  <h3 class="text-center mt-4">Editar Conta</h3>
+
+  <form class="w-25 text-center m-auto pt-3" method="POST" action="/loja/conta">
+    <div class="form-outline mb-2">
+      <label class="form-label" for="nome" id="nome" type="text">Nome Completo:</label>
+      <input type="text" name="nome" id="nome" class="form-control" value="<%= usuario.nome %>" />
+    </div>
+
+    <div class="form-outline mb-2">
+      <label class="form-label" for="dataNascimento" id="dataNascimento">Data de Nascimento:</label>
+      <input type="date" name="dataNascimento" id="dataNascimento" class="form-control" value="<%= usuario.dataNascimento %>" />
+    </div>
+      
+    <div class="form-outline mb-2">
+      <label class="form-label" for="genero" id="genero" type="text">Gênero:</label>
+      <div class="form-outline">
+        <span style="margin-right: 10px;">
+          <input type="radio" name="genero" value="masculino" id="genero" class="form-check-input"
+          <% if(usuario.genero == "masculino") { %> checked <% } %> /><span style="margin-left: 5px;"  >Masculino</span>
+        </span>
+        <span style="margin-right: 10px;">
+          <input type="radio" name="genero" value="feminino" id="genero" class="form-check-input" 
+          <% if(usuario.genero == "feminino") { %> checked <% } %> /><span style="margin-left: 5px;">Feminino</span>
+        </span>
+        <span style="margin-right: 10px;">
+          <input type="radio" name="genero" value="outro" id="genero" class="form-check-input"
+          <% if(usuario.genero != "masculino" && usuario.genero != "feminino") { %> checked <% } %> /><span style="margin-left: 5px;">Outro</span>
+        </span>
+      </div>
+    </div>
+
+    <div class="form-outline mb-2">
+      <label for="telefone">Telefone:</label>
+      <input type="tel" name="telefone" id="telefone" class="form-control" value="<%= usuario.telefone %>" />
+    </div>
+
+    <div class="form-outline mb-2">
+      <label class="form-label" for="email" id="email" type="text">Email:</label>
+      <input type="email" name="email" id="email" class="form-control" value="<%= usuario.email %>" />
+    </div>
+      
+    <button type="submit" class="btn btn-primary mb-4 mt-4">Concluir Alterações</button>
+  </form> 
+
+  <footer class="text-center mb-2">Projeto 1 de Web - Desenvolvido por <a href="">Jorge Nobre</a>, <a href="">Livian Torres</a>, <a href="">Samuel Lopes</a>, <a href="https://github.com/victor-joness">Victor Mesquita</a></footer>
+  <script src="http://localhost:3000/js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Admin - Adicionar Veículo</title>
+    <link href="http://localhost:3000/css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body>
+  <%- include("../partials/header-admin"); %>
+
+  <h3 class="text-center mt-4">Cadastro de Veiculos</h3>
+
+  <form 
+    class="w-25 text-center m-auto pt-3" 
+    action="/admin/loja/add-veiculo"
+    method="post"
+    id="forma"
+  >
+      <!-- Nome input -->
+      <div class="form-outline mb-2">
+        <label class="form-label" for="nome" id="nome" type="text">Nome</label>
+        <input type="text" name="nome" id="nome" class="form-control" required/>
+      </div>
+
+      <!-- Marca input -->
+      <div class="form-outline mb-2">
+          <label class="form-label" for="marca" id="marca" type="text">Marca</label>
+          <input type="text" name="marca" id="marca" class="form-control" required/>
+      </div>
+    
+      <!-- Cor input -->
+      <div class="form-outline mb-2">
+          <label class="form-label" for="cor" id="cor" type="text">Cor</label>
+          <input type="text" name="cor" id="cor" class="form-control" required />
+      </div>
+      <!-- Diária input -->
+      <div class="form-outline mb-2">
+          <label for="diaria">Diária</label>
+          <input type="number" name="diaria" id="diaria" min="0" class="form-control" required />
+      </div>
+      <!-- img input -->
+      <div class="form-outline mb-2">
+          <label class="form-label" for="foto" id="foto" type="text">URL da Foto</label>
+          <input type="text" name="foto" id="foto" class="form-control" required />
+      </div>
+    
+      <!-- Submit button -->
+      <button type="submit" class="btn btn-primary btn-block mb-4">Cadastrar novo carro</button>
+  </form>   
+  
+  <footer class="text-center">Projeto 1 de Web - Desenvolvido por <a href="">Jorge Nobre</a>, <a href="">Livian Torres</a>, <a href="">Samuel Lopes</a>, <a href="https://github.com/victor-joness">Victor Mesquita</a></footer>
+  <script src="http://localhost:3000/js/bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Only Chat</h1>
+        <div class="user-container">
+          <h2>Nome do user</h2>
+          <img
+            src="https://cdn.pixabay.com/photo/2016/03/31/19/58/avatar-1295429_960_720.png"
+            width="30"
+            height="30"
+            class="d-inline-block align-top"
+            alt=""
+          />
+          <span class="logout" (click)="logout()">Logout</span>
+        </div>
+      </div>
+
+      <div class="search-container">
+        <form class="form-inline">
+          <input
+            class="form-control mr-sm-2"
+            type="search"
+            placeholder="Buscar..."
+            aria-label="Search"
+          />
+          <button class="btn" type="submit">
+            Buscar
+          </button>
+        </form>
+      </div>
+
+
+      <div class="users-container">
+        <h1>Usuários</h1>
+        <div class="card-deck">
+            <div class="card-deck-user" *ngFor="let user of users">
+                <div class="">
+                    <img src="{{user.imageUrl}}" alt="">
+                    <h1>Nome: {{user.name}}</h1>
+                    <h3>Email: {{user.email}}</h3>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-primary">Conversar</button>
+                    <!-- <button class="logout">Bloquear</button> -->
+                </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
